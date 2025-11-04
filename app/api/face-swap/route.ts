@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
     const sourceMimeType = getMimeType(sourceImage)
     const targetMimeType = getMimeType(targetImage)
 
-    const model = client.getGenerativeModel({ model: "gemini-2.5-flash" })
+    const model = client.getGenerativeModel({ model: "gemini-2.5-flash-image" })
 
     const response = await model.generateContent({
       contents: [
